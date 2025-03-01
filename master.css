@@ -750,6 +750,264 @@ ul {
 }
 
 /* end project table */
+
+/* start Setting-page */
+.Setting-page {
+    grid-template-columns:repeat(auto-fill, minmax(450px, 1fr));
+    
+}
+
+.Setting-page .site-control .close-message {
+    border: 1px solid #ccc;
+    resize: none;
+    min-height: 150px;
+
+}
+.Setting-page .General-info .email {
+    display: inline-flex;
+    width: calc(100% - 80px);
+
+}
+
+.Setting-page .Security-box .sec-box {
+    padding-bottom: 10px;
+}
+
+.Setting-page .Security-box .sec-box .button {
+    transition: 0.3s;
+
+}
+
+.Setting-page .sec-box .button:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.Setting-page .Security-box .sec-box:not(:last-of-type) {
+    border-bottom: 1px solid #EEE;
+
+}
+
+.Setting-page .SocialMedia i {
+    width: 60px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: 0.3s ease;
+}
+
+.Setting-page .SocialMedia input {
+    background-color: #f6f6f6;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 0 6px 6px 0;
+    padding-left: 18px;
+
+}
+
+.Setting-page .SocialMedia > div:focus-within i {
+    color: black;
+}
+
+.Setting-page .Widgets-control input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.Setting-page .Widgets-control label {
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.Setting-page .Widgets-control label::before, 
+.Setting-page .Widgets-control label::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+
+}
+
+.Setting-page .Widgets-control label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+}
+
+.Setting-page .Widgets-control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.Setting-page .Widgets-control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s ease;
+
+}
+
+.Setting-page .Widgets-control input[type="checkbox"]:checked + label::after {
+    transform: scale(1);
+}
+
+
+.Setting-page .packup-control  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.Setting-page .packup-control .data label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.Setting-page .packup-control .data label::before,
+.Setting-page .packup-control .data label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+}
+
+.Setting-page .packup-control .data label::before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--grey-color);
+    border-radius: 50%;
+
+}
+
+.Setting-page .packup-control .data label:hover::before {
+    border-color: var(--blue-color);
+} 
+
+.Setting-page .packup-control .data label::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    left: 3px;
+    top: 14px;
+    transition: 0.3 ease;
+    transform: scale(0);
+
+}
+
+.Setting-page .packup-control .data input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+
+}
+
+.Setting-page .packup-control .data input[type="radio"]:checked + label::after {
+    transform: scale(1);
+}
+
+
+.Setting-page .packup-control .Servers {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+
+}
+
+@media (max-width: 767px) {
+    .Setting-page .packup-control .Servers {
+        flex-wrap: wrap;
+    }
+}
+
+.Setting-page .packup-control .Servers .Server {
+    position: relative;
+    border: 1px solid var(--grey-color);
+
+}
+
+.Setting-page .packup-control .Servers .Server label{
+    cursor: pointer;
+}
+
+.Setting-page .packup-control .Servers input[type="radio"]:checked + .Server {
+    border-color: var(--blue-alt-color) ;
+    color: var(--blue-color);
+}
+
+
+@media (max-width: 767px) {
+    .Setting-page {
+        grid-template-columns: minmax(200px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+.Setting-page :disabled {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #BBB;
+}
+/* end Setting-page */
+
+/* start toggle */
+.checkbox-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.toggle-switch {
+    background-color: #ccc;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s ease;
+
+}
+
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00d";
+    font-weight: 900;
+    background-color: white;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+}
+
+.checkbox-toggle:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+
+.checkbox-toggle:checked + .toggle-switch::before {
+    content: "\f00c";
+    color: var(--blue-color);
+    left: 50px;
+
+}
+/* end toggle */
 /* start animation */
 @keyframes change-color {
     from {
